@@ -1,16 +1,20 @@
-import * as React from "react";
-import { View, Text } from "react-native";
+import  React from "react";
+import styles from './styles.js'
 
-export default function App() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>hello</Text>
-    </View>
-  );
+import { View, Text } from "react-native";
+import Home from "./screens/Home.js";
+
+export default class App extends React.Component {
+
+  render(){
+    return(
+      <View style={styles.container}>
+        <Home/>
+
+      </View>
+      
+    );
+  }
 }
+
+  
