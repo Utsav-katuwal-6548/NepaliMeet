@@ -1,21 +1,20 @@
 import React from 'react';
-import styles from'../styles'
-import{
-    Text,
-    View
-} from 'react-native';
-import { render } from 'react-dom';
+import styles from '../styles'
+import { Text, View } from 'react-native';
 
-class Profile extends React.Component{
-state={}
-componentWithMount(){}
-render(){
-    return(
-        <View>
-            <Text>Profile</Text>
-        </View>
-    )
+class Profile extends React.Component {
+    state = {}
+
+    componentWithMount() {
+    }
+
+    render() {
+        return (
+            <View style={styles.container}>
+                <Text style={styles.fontBig}>Profile Screen</Text>
+            </View>
+        )
+    }
 }
 
-}
 export default Profile;
