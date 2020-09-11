@@ -5,7 +5,7 @@ import styles from "../styles";
 class Chat extends React.Component {
     state = {}
 
-    componentWithMount() {
+    componentWillMount() {
     }
 
     render() {

@@ -5,7 +5,7 @@ import styles from "../styles";
 class Matches extends React.Component {
     state = {}
 
-    componentWithMount() {
+    componentWillMount() {
     }
 
     render() {
