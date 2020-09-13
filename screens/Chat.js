@@ -1,11 +1,11 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import styles from "../styles";
+import styles from '../styles';
 
 class Chat extends React.Component {
     state = {}
 
-    componentWillMount() {
+    componentDidMount() {
     }
 
     render() {
