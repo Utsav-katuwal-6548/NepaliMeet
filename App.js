@@ -1,7 +1,5 @@
 import React from 'react';
-
-
-
+import {Text} from 'react-native'
 import reducers from './redux/reducers';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
@@ -13,19 +11,14 @@ const middleware = applyMiddleware(thunkMiddleware)
 const store = createStore(reducers, middleware);
 
 
-export default class App extends React.Component{
+export default class App extends React.Component {
 
-    render(){
-        return(
+    render() {
+        return (
             <Provider store={store}>
-                
-            <Login/>
+
+                <Login />
             </Provider>
         );
     }
 }
-
-
-
-
-

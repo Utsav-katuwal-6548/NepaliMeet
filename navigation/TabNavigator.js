@@ -1,7 +1,7 @@
 import React from 'react';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Home from '../screens/Home';
-import Login from '../screens/Login';
+
 import Profile from '../screens/Profile';
 import Matches from '../screens/Matches';
 import Chat from '../screens/Chat';
