@@ -1,11 +1,12 @@
 import React from 'react';
-import Login from './screens/Login';
+
 
 
 import reducers from './redux/reducers';
 import thunkMiddleware from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import Login from './screens/Login';
 
 
 const middleware = applyMiddleware(thunkMiddleware)

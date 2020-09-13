@@ -1,11 +1,14 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import styles from '../styles';
-import RootNavigator from '../navigation/RootNavigator.js';
-import {login} from '../redux/actions';
+import {connect} from 'react-redux';
+import styles from '../styles'
+
+import {login} from '../redux/actions'
 import * as firebase from 'firebase';
-firebase.initializeApp(firebaseConfig);
 import firebaseConfig from '../config/firebase.js'
+import TabNavigator from '../navigation/TabNavigator';
+firebase.initializeApp(firebaseConfig);
+
 
 
 class Login extends React.Component {
@@ -39,12 +42,12 @@ class Login extends React.Component {
     render() {
         if(this.props.loggedIn){
             return(
-                <RootNavigator/>
+                <TabNavigator/>
             )
         }else{
             return (
                 <View styles={styles.container}>
-                    <Text>Login</Text>
+                    <Text>{this.props.loggedIn}</Text>
                 </View>
             )
 
