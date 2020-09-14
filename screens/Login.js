@@ -10,6 +10,7 @@ import firebaseConfig from '../config/firebase.js';
 import TabNavigator from '../navigation/TabNavigator';
 import RootNavigator from '../navigation/RootNavigator';
 import { Button } from 'react-native-paper';
+import * as Facebook from 'expo-facebook';
 
 
 
@@ -31,8 +32,8 @@ class Login extends React.Component {
     });
 
   }
-  login = async () => {
-    const { type, token } = await Expo.Facebook.logInWithReadPermissionsAsync('3291151004311208', {
+   login = async () => {
+    const { type, token } = await Facebook.logInWithReadPermissionsAsync('3291151004311208', {
       permissions: ['public_profile'],
     });
     if (type === 'success') {
