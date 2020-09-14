@@ -9,6 +9,7 @@ import * as firebase from 'firebase';
 import firebaseConfig from '../config/firebase.js';
 import TabNavigator from '../navigation/TabNavigator';
 import RootNavigator from '../navigation/RootNavigator';
+import { Button } from 'react-native-paper';
 
 
 
@@ -47,19 +48,21 @@ class Login extends React.Component {
   }
 
   render() {
-    if (this.props.loggedIn) {
+    if(this.props.loggedIn){
       return (
-        <RootNavigator />
+        <RootNavigator/>
       )
-    } else {
+    }else{
+
       return (
-        <View styles={styles.container}>
-          <Text>{this.props.loggedIn}</Text>
+        <View style={styles.container}>
+          <Button onPress={this.login.bind(this)}>
+          <Text style={styles.fontBig}>Login</Text>
+          </Button>
         </View>
       )
-
     }
-
+    
   }
 
 }
@@ -67,7 +70,7 @@ class Login extends React.Component {
 
 function mapStateToProps(state) {
   return {
-    loggedIn: state.loggedIn
+    loggedIn:state.loggedIn
   };
 }
 
